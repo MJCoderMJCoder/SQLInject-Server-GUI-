@@ -3,6 +3,8 @@ package com.lzf.gui;
 import java.awt.EventQueue;
 
 import javax.swing.JFrame;
+import javax.swing.UIManager;
+
 import java.awt.Color;
 import java.awt.Window.Type;
 import java.awt.GridLayout;
@@ -21,6 +23,7 @@ public class AppWindow {
 		EventQueue.invokeLater(new Runnable() {
 			public void run() {
 				try {
+					UIManager.setLookAndFeel(UIManager.getSystemLookAndFeelClassName());
 					AppWindow window = new AppWindow();
 					window.frame.setVisible(true);
 				} catch (Exception e) {
